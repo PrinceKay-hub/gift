@@ -1,0 +1,40 @@
+:root{--red:#b3202a;--green:#1f6b4a;--ink:#2a2420;--mut:#7a6f66}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,sans-serif;color:var(--ink);background:radial-gradient(#fff9 2px,transparent 2.5px) 0 0/38px 38px,linear-gradient(#fdeee0,#f3dfd0 60%,#e9d3c3) fixed;min-height:100vh;overflow-x:hidden}
+.wrap{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:20px 16px 80px}
+.hero{text-align:center;padding:12px 0 8px}.hero h1{margin:4px 0;font-size:26px}.hero p{margin:0;color:var(--mut)}
+.pill{display:inline-block;margin-top:10px;padding:4px 12px;border-radius:99px;background:#fff;font-size:13px;box-shadow:0 1px 3px #0001}
+.card{background:#fff;border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 2px 12px #0001}
+.card h3{margin:0 0 6px}
+.input{display:block;width:100%;padding:12px;margin:8px 0;border:1.5px solid #e4d9cc;border-radius:10px;font:inherit;background:#fffdfa}
+.input:focus{outline:none;border-color:var(--red)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;margin:8px 0;border:0;border-radius:10px;background:var(--red);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.btn.alt{background:#efe6da;color:var(--ink)}
+.btn:disabled{opacity:.6;cursor:wait}
+.spin{width:16px;height:16px;border:2px solid #fff6;border-top-color:#fff;border-radius:50%;animation:s .7s linear infinite}
+.alt .spin{border-color:#0003;border-top-color:var(--ink)}
+@keyframes s{to{transform:rotate(360deg)}}
+.seg{display:flex;background:#efe6da;border-radius:12px;padding:4px;gap:4px;margin:12px 0}
+.seg button{flex:1;padding:10px 6px;border:0;border-radius:9px;background:none;font:inherit;font-size:14px;cursor:pointer;color:var(--mut)}
+.seg button.on{background:#fff;color:var(--ink);font-weight:600;box-shadow:0 1px 4px #0002}
+.badge{background:var(--red);color:#fff;border-radius:99px;font-size:11px;padding:1px 7px;margin-left:4px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--green);color:#fff;padding:12px 18px;border-radius:12px;box-shadow:0 4px 16px #0003;max-width:90%;z-index:9}
+.toast.bad{background:var(--red)}
+.gift{text-align:center;cursor:pointer;padding:30px 18px;background:linear-gradient(135deg,var(--red),#8f141e);color:#fff;border-radius:16px;transition:transform .2s;margin:14px 0}
+.gift:active{transform:scale(.97)}.gift .big{font-size:56px}
+.gift h2{margin:6px 0;font-size:30px;animation:pop .5s}
+@keyframes pop{from{transform:scale(.5);opacity:0}}
+.pin{display:flex;align-items:center;justify-content:space-between;background:#fff8e1;border:1.5px dashed #e0b400;border-radius:12px;padding:12px 14px;margin:14px 0}
+.pin b{font-size:24px;letter-spacing:4px}.pin button{border:0;background:#e0b400;border-radius:8px;padding:8px 12px;cursor:pointer;font:inherit}
+.bub{background:#f4ede3;border-radius:14px 14px 14px 4px;padding:10px 14px;margin:8px 0}.bub small{color:var(--mut)}
+.top{display:flex;justify-content:space-between;align-items:center}.top h2{margin:0}
+.link{background:none;border:0;color:var(--mut);cursor:pointer;font:inherit}
+.mut{color:var(--mut);font-size:14px}
+summary{cursor:pointer;font-weight:600}
+
+.deco{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.deco span{position:absolute;top:-50px;opacity:.55;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(112vh) rotate(360deg)}}
+.trees{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:space-around;align-items:flex-end;pointer-events:none;z-index:0;opacity:.4;padding:0 4px;overflow:hidden}
+.trees span{line-height:1}
+@media (prefers-reduced-motion:reduce){.deco span{animation:none;top:auto}}
