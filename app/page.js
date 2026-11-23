@@ -36,7 +36,7 @@ export default function Home() {
   const toast = note && <div className={"toast" + (note.bad ? " bad" : "")}>{note.m}</div>;
 
   if (!me) return (<div>
-    <div className="hero"><div style={{ fontSize: 46 }}>🎁</div><h1>Youth Gift Exchange</h1><p>Secret gifts, shared joy this Christmas</p>
+    <div className="hero"><div style={{ fontSize: 46 }}>🎁</div><h1>Oforikom Foursquare Youth - Gift Exchange 2026</h1><p>Secret gifts, shared joy this Christmas</p>
       <span className="pill">{busy === "init" ? "Loading…" : `${status.count ?? 0} joined · ${status.drawn ? "names drawn" : "sign-ups open"}`}</span></div>
     <div className="seg">
       {!status.drawn && <button className={auth === "join" ? "on" : ""} onClick={() => setAuth("join")}>Join</button>}
